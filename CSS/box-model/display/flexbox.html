@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Example</title>
+    <style>
+        /* Flex container */
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* default -> row */
+            justify-content: space-between; /* Distribute items along the main axis */
+            align-items: center; /* Align items along the cross axis */
+            padding: 20px;
+            background-color: lightblue;
+            height: 200px;
+        }
+
+        /* Flex items */
+        .flex-item {
+            background-color: lightcoral;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+            flex-grow: 3; /* Flex items grow equally to fill the space */
+        }
+
+        /* Fixed width item */
+        .flex-item.fixed {
+            flex-grow: 0; /* This item won't grow */
+            width: 100px; /* Fixed width for this item */
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Flexbox Layout</h1>
+
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item fixed">Fixed Width Item</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+</body>
+</html>

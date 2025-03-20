@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Flex-Grow Example</title>
+    <style>
+        /* Flex container */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: lightblue;
+            height: 200px;
+        }
+
+        /* Flex items */
+        .flex-item {
+            background-color: lightcoral;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Flex-grow values */
+        .flex-item.grow-1 {
+            flex-grow: 1;
+        }
+
+        .flex-item.grow-2 {
+            flex-grow: 2;
+        }
+
+        .flex-item.grow-3 {
+            flex-grow: 3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Flex-Grow</h1>
+
+    <div class="flex-container">
+        <div class="flex-item grow-1">Item 1 (flex-grow: 1)</div>
+        <div class="flex-item grow-2">Item 2 (flex-grow: 2)</div>
+        <div class="flex-item grow-3">Item 3 (flex-grow: 3)</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Display Types</title>
+    <style>
+        /* Flow (default inner type for block elements) */
+        .flow-container {
+            display: block; /* Outer display type */
+            background-color: lightcoral;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flow-container div {
+            background-color: white;
+            padding: 10px;
+            margin: 5px 0;
+            
+        }
+
+        /* Flex (inner flex layout) */
+        .flex-container {
+            display: flex; /* Outer: block, Inner: flex */
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex-container div {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            flex: 1; /* Flex items grow equally */
+            text-align: center;
+        }
+
+        /* Grid (inner grid layout) */
+        .grid-container {
+            display: grid; /* Outer: block, Inner: grid */
+            grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+            gap: 10px; /* Space between grid items */
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .grid-container div {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Inner Display Types Example</h1>
+
+    <!-- Flow Container (Default Layout) -->
+    <div class="flow-container">
+        <div>Flow Item 1</div>
+        <div>Flow Item 2</div>
+        <div>Flow Item 3</div>
+    </div>
+
+    <!-- Flexbox Container -->
+    <div class="flex-container">
+        <div>Flex Item 1</div>
+        <div>Flex Item 2</div>
+        <div>Flex Item 3</div>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="grid-container">
+        <div>Grid Item 1</div>
+        <div>Grid Item 2</div>
+        <div>Grid Item 3</div>
+        <div>Grid Item 4</div>
+        <div>Grid Item 5</div>
+        <div>Grid Item 6</div>
+    </div>
+
+</body>
+</html>

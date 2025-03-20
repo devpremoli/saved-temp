@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outer Display Type Example</title>
+    <style>
+        .block {
+            display: block;
+            width: 100%;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .inline {
+            display: inline;
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Outer Display Types</h1>
+
+    <!-- Block Element -->
+    <div class="block">
+        I am a block-level element (div). I take up the full width of the container and start on a new line.
+    </div>
+
+    <!-- Inline Element -->
+    <span class="inline">
+        I am an inline element (span). I take only the space I need and stay on the same line.
+    </span>
+    <span class="inline">
+        Another inline element. I sit next to the previous one.
+    </span>
+
+    <!-- Inline-Block Element -->
+    <div class="inline-block">
+        I am an inline-block element (div). I sit inline, but I respect block-level dimensions.
+    </div>
+    <div class="inline-block">
+        Another inline-block element. I can sit next to the previous one.
+    </div>
+
+</body>
+</html>
