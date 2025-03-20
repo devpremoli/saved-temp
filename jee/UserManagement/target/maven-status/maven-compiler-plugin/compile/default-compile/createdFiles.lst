@@ -1,0 +1,3 @@
+com/xadmin/usermanagement/bean/User.class
+com/xadmin/usermanagement/web/UserServlet.class
+com/xadmin/usermanagement/dao/UserDao.class

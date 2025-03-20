@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    
+    <context-param>
+        <param-name>authorizationToken</param-name>
+        <param-value>12345prem</param-value>
+    </context-param>
+
+
+    
+    <servlet>
+        <servlet-name>XmlServlet</servlet-name>
+        <servlet-class>org.example.myfirstwebapp.XmlServlet</servlet-class>
+        <init-param>
+            <param-name>xmlToken</param-name>
+            <param-value>xml123</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>XmlServlet</servlet-name>
+        <url-pattern>/xml</url-pattern>
+        <url-pattern>/xml/any/*</url-pattern>
+    </servlet-mapping>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/500.jsp</location>
+    </error-page>
+</web-app>
