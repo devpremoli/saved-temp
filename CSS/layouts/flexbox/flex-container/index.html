@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row {
+        justify-content: center;
+
+        height: 500px;
+      }
+
+      .column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        height: 500px;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
+        align-content: center;
+        height: 500px;
+
+
+      }
+      
+      .flex-container {
+        display: flex;
+        background-color: blue;
+        
+      }
+
+      .flex-container > div {
+        background-color: aqua;
+        margin: 20px;
+        padding: 20px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      The CSS properties we use for the flex container are:
+      <ul>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+        <li>justify-content</li>
+        <li>align-items</li>
+        <li>align-content</li>
+      </ul>
+    </p>
+
+    <p>flex-direction: row</p>
+    <p>justify-content: center</p>
+    <p>align-items: flex-end</p>
+    <div class="flex-container row">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>flex-direction: column</p>
+    <p>justify-content: center</p>
+    <p>align-items: flex-end</p>
+    <div class="flex-container column">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>flex-wrap: wrap</p>
+
+    <div class="flex-container wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>  
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>  
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>  
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>  
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>  
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>         
+    </div>
+  </body>
+</html>
