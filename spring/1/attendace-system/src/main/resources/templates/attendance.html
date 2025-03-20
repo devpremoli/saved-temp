@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Show login and register links if user is not authenticated -->
+    <a href="/login" class="nav-link">Login</a>
+    <a href="/register" class="nav-link">Register</a>
+
+    <!-- Show attendance and logout links only if user is authenticated -->
+    <a href="/attendance" class="nav-link active" sec:authorize="!isAuthenticated()">Attendance</a>
+    <form th:action="@{/logout}" method="post" style="display: inline;">
+      <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+      <button type="submit" class="nav-link logout-button">Logout</button>
+    </form>
+  </div>
+</nav>
+<div class="table-container">
+  <h1>Attendance Records</h1>
+  <table>
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>In Time</th>
+      <th>Out Time</th>
+      <th>Signature</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="attendance : ${attendances}">
+      <td th:text="${attendance.date}"></td>
+      <td th:text="${attendance.inTime}"></td>
+      <td th:text="${attendance.outTime}"></td>
+      <td th:text="${attendance.signature}"></td>
+    </tr>
+    </tbody>
+  </table>
+  <form action="/attendance/log" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Log Attendance</button>
+  </form>
+</div>
+</body>
+</html>
