@@ -1,0 +1,24 @@
+#!/bin/bash
+# Update and install Apache
+yum update -y
+yum install -y httpd
+
+# Start and enable the httpd service
+systemctl start httpd
+systemctl enable httpd
+
+# Fetch the IMDSv2 token
+TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+
+# Retrieve the network interface and subnet ID using the token
+INTERFACE=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" "http://169.254.169.254/latest/meta-data/network/interfaces/macs/")
+SUBNETID=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" "http://169.254.169.254/latest/meta-data/network/interfaces/macs/${INTERFACE}/subnet-id")
+
+# Check if SUBNETID is empty
+if [ -z "$SUBNETID" ]; then
+    echo "Failed to retrieve subnet ID" >&2
+    exit 1
+fi
+
+# Create the index.html with the resolved SUBNETID
+echo "<center><h1>This instance is in the subnet with ID: $SUBNETID </h1></center>" > /var/www/html/index.html
