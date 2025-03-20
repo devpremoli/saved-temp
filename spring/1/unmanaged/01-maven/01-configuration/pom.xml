@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>configuration</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Configuration</name>
+	<description>Maven Configuration: non-standard directories, custom classpath</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>22</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<!--
+		# This configuration changes the default source directory from src/test/java to custom-src/source/java.
+		## src/main/java is no longer a source directory
+		# add <sourceDirectory>src/main/java</sourceDirectory> to also use src/main/java as a source directory
+		-->
+		<sourceDirectory>custom-src/main/java</sourceDirectory>
+
+		<!--
+		# Custom configuration for test source directory
+		# src/main/test is no a source directory
+		# comment here how to make src/main/test also a test source directory
+
+		# This configuration changes the default test source directory from src/test/java to custom-src/test/java.
+		## src/test/java is no longer a test source directory
+        # add <testSourceDirectory>src/test/java</testSourceDirectory> to also use src/test/java as a test source directory
+        #
+		-->
+		<testSourceDirectory>custom-src/test/java</testSourceDirectory>
+
+		<!--
+		# Custom configuration for resources directory
+		# src/main/resources is no longer a resources directory
+		# Add below code to make src/main/resources another resource directory
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+
+        # This configuration changes the default resources directory from src/main/resources
+        ## src/main/resources is no longer a resources directory
+        # add below code inside <resources></resources>to also use src/main/resources as a  resource directory:
+			<resource>
+				<directory>custom-src/main/resources</directory>
+			</resource>
+		-->
+		<resources>
+			<resource>
+				<directory>custom-src/main/resources</directory>
+			</resource>
+		</resources>
+
+		<!--
+		# Comment here
+		# Comment here
+		# comment here
+		-->
+		<outputDirectory>custom-target</outputDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
