@@ -1,0 +1,238 @@
+{
+  "GetAllRoles": {
+    "message": "",
+    "result": true,
+    "data": [
+      {
+        "roleId": 1,
+        "role": "Super Admin"
+      },
+      {
+        "roleId": 2,
+        "role": "Admin"
+      },
+      {
+        "roleId": 3,
+        "role": "TL"
+      },
+      {
+        "roleId": 4,
+        "role": "Juniora Developer"
+      },
+      {
+        "roleId": 5,
+        "role": "Senior Developer"
+      }
+    ]
+  },
+  "GetAllDesignation": {
+    "message": "",
+    "result": true,
+    "data": [
+      {
+        "designationId": 1,
+        "designation": "UI/UX Designer"
+      },
+      {
+        "designationId": 2,
+        "designation": "Front enddeveloper"
+      },
+      {
+        "designationId": 3,
+        "designation": "back end developer"
+      }
+    ]
+  },
+  "GetAllClients": {
+    "message": "",
+    "result": true,
+    "data": [
+      {
+        "clientId": 141,
+        "contactPersonName": "ousmanew",
+        "companyName": "TC2",
+        "address": "busumbala",
+        "city": "string",
+        "pincode": "string",
+        "state": "string",
+        "employeeStrength": 343,
+        "gstNo": "string",
+        "contactNo": "11111",
+        "regNo": "string"
+      },
+      {
+        "clientId": 998,
+        "contactPersonName": "Isaac",
+        "companyName": "winner",
+        "address": "JVM",
+        "city": "Accra",
+        "pincode": "1112122",
+        "state": "Tamil Nadu",
+        "employeeStrength": 14,
+        "gstNo": "77766680",
+        "contactNo": "8989899989",
+        "regNo": "12345"
+      },
+      {
+        "clientId": 3813,
+        "contactPersonName": "Name1",
+        "companyName": "accenture",
+        "address": "string",
+        "city": "string",
+        "pincode": "2322",
+        "state": "string",
+        "employeeStrength": 33666,
+        "gstNo": "string",
+        "contactNo": "string",
+        "regNo": "string"
+      },
+      {
+        "clientId": 3834,
+        "contactPersonName": "PPP11111",
+        "companyName": "kaudata",
+        "address": "Ssdsdsd",
+        "city": "Kaka swa",
+        "pincode": "4123224",
+        "state": " MH",
+        "employeeStrength": 10,
+        "gstNo": "2121",
+        "contactNo": "4545445",
+        "regNo": "112121"
+      },
+      {
+        "clientId": 3973,
+        "contactPersonName": "sdfff",
+        "companyName": "sdf",
+        "address": "sdf",
+        "city": "sdf",
+        "pincode": "sdf",
+        "state": "sdf",
+        "employeeStrength": 50,
+        "gstNo": "sdf",
+        "contactNo": "sdf",
+        "regNo": "sdf"
+      },
+      {
+        "clientId": 3974,
+        "contactPersonName": "string",
+        "companyName": "strin",
+        "address": "string",
+        "city": "string",
+        "pincode": "string",
+        "state": "string",
+        "employeeStrength": 0,
+        "gstNo": "string",
+        "contactNo": "string",
+        "regNo": "string"
+      },
+      {
+        "clientId": 3975,
+        "contactPersonName": "fdsa",
+        "companyName": "fd",
+        "address": "fds",
+        "city": "fd",
+        "pincode": "fd",
+        "state": "fas",
+        "employeeStrength": 0,
+        "gstNo": "fsa",
+        "contactNo": "fsa",
+        "regNo": "sdf"
+      },
+      {
+        "clientId": 3985,
+        "contactPersonName": "arewar",
+        "companyName": "czxgfsret",
+        "address": "reawrwear",
+        "city": "dsafreat",
+        "pincode": "dsrer",
+        "state": "eawrewr",
+        "employeeStrength": 77,
+        "gstNo": "ewara",
+        "contactNo": "dasrewr",
+        "regNo": "gtrgerge"
+      },
+      {
+        "clientId": 3986,
+        "contactPersonName": "aaa",
+        "companyName": "aaa",
+        "address": "aaa",
+        "city": "aaa",
+        "pincode": "aaa",
+        "state": "aaa",
+        "employeeStrength": 10,
+        "gstNo": "aaa",
+        "contactNo": "aaa",
+        "regNo": "aaa"
+      },
+      {
+        "clientId": 3987,
+        "contactPersonName": "aaa222",
+        "companyName": "aaaaaa222",
+        "address": "aaaaaa222",
+        "city": "aaaaaa222",
+        "pincode": "aaaaaa222",
+        "state": "aaaaaa222",
+        "employeeStrength": 1022,
+        "gstNo": "aaaaaa222",
+        "contactNo": "aaaaaa222",
+        "regNo": "aaaaaa222"
+      },
+      {
+        "clientId": 3988,
+        "contactPersonName": "string",
+        "companyName": "string",
+        "address": "string",
+        "city": "string",
+        "pincode": "string",
+        "state": "string",
+        "employeeStrength": 0,
+        "gstNo": "string",
+        "contactNo": "string",
+        "regNo": "string"
+      },
+      {
+        "clientId": 3989,
+        "contactPersonName": "ashok",
+        "companyName": "xsxssd",
+        "address": "string",
+        "city": "string",
+        "pincode": "string",
+        "state": "string",
+        "employeeStrength": 0,
+        "gstNo": "string",
+        "contactNo": "string",
+        "regNo": "string"
+      },
+      {
+        "clientId": 3990,
+        "contactPersonName": "apple",
+        "companyName": "apple",
+        "address": "dfghu",
+        "city": "dtyui",
+        "pincode": "4567",
+        "state": "dfg",
+        "employeeStrength": 5,
+        "gstNo": "fghj",
+        "contactNo": "fghj",
+        "regNo": "ghjk"
+      },
+      {
+        "clientId": 3991,
+        "contactPersonName": "jai",
+        "companyName": "dgfg",
+        "address": "hgfhg",
+        "city": "ghfh",
+        "pincode": "hfhfhg",
+        "state": "fhgfhgfhf",
+        "employeeStrength": 0,
+        "gstNo": "gfhjh",
+        "contactNo": "hfhfh",
+        "regNo": "gfhhfhgf"
+      }
+    ]
+  },
+  "AddUpdateClient": {
+},
+"DeleteClientByClientId?clientid=": {
+}
+}

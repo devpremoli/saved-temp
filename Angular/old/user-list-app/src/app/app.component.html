@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<!-- User Filter Input: (filterChanged) triggers updateFilter method in AppComponent -->
+<app-user-filter (filterChanged)="updateFilter($event)"></app-user-filter>
+
+<!-- User List: Pass the filtered users and the filter text -->
+<app-user-list [users]="users" [filterText]="filterText"></app-user-list>

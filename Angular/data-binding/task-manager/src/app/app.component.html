@@ -1,0 +1,9 @@
+<h1>Task Manager</h1>
+
+<app-task-form (addTask)="addTask($event)"></app-task-form>
+
+<app-task-list
+  [tasks]="tasks"
+  (deleteTask)="deleteTask($event)"
+  (toggleCompletion)="toggleTaskCompletion($event)">
+</app-task-list>
