@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+  <h1>Oops! Something went wrong.</h1>
+  <p th:text="${errorMessage}">Default error message if none provided.</p>
+  <a href="/" class="btn">Go Home</a>
+  <a href="javascript:history.back()" class="btn">Go Back</a>
+</div>
+</body>
+</html>

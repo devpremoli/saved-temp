@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Author</title>
+</head>
+<body>
+<h1>Create New Author</h1>
+<form th:action="@{/authors}" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" th:value="${author.firstName}" required/><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" th:value="${author.lastName}" required/><br>
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" rows="4" cols="50" th:text="${author.bio}"></textarea><br>
+
+    <button type="submit">Create Author</button>
+</form>
+<a href="/authors">Back to List</a>
+</body>
+</html>

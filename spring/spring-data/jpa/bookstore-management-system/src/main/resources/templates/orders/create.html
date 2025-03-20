@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create order</title>
+</head>
+<body>
+<form action="#" th:action="@{/orders}" th:object="${orderDTO}" method="post">
+    <!-- Customer selection -->
+    <label for="customer">Customer:</label>
+    <select th:field="*{customerId}" id="customer">
+        <option value="" disabled selected>Select customer</option>
+        <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.firstName + ' ' + customer.lastName}"></option>
+    </select>
+
+    <!-- Book selection -->
+    <label for="books">Books:</label>
+    <select multiple th:field="*{bookIds}" id="books">
+        <option th:each="book : ${books}" th:value="${book.id}" th:text="${book.title}"></option>
+    </select>
+
+    <!-- Order details -->
+    <label for="orderDate">Order Date:</label>
+    <input type="date" th:field="*{orderDate}" id="orderDate" />
+
+    <label for="totalAmount">Total Amount:</label>
+    <input type="number" th:field="*{totalAmount}" id="totalAmount" />
+
+    <button type="submit">Create Order</button>
+</form>
+</body>
+</html>
